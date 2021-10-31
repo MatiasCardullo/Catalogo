@@ -2,6 +2,9 @@
 using System.Windows.Forms;
 using System.IO;
 using System.Collections.Generic;
+using System.Net;
+using System.Threading.Tasks;
+using System.Net.Http;
 
 namespace Catalogo
 {
@@ -28,7 +31,6 @@ namespace Catalogo
 
         private void Catalogo_Load(object sender, EventArgs e)
         {
-            
         }
 
         private void Catalogo_FormClosing(object sender, FormClosingEventArgs e)
