@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "fogDjBjb20mYwCdelDfrSD/V4BojHbLJEIavHxEN/+UC70doiYFEp+n8cJkcV31Bx9t4bWt291jkstaWeGKDVw==",
+  "dgSpecHash": "VG3WZECzUy15J5t08rEj6CM8MTTQbhqvcEHgh+LKaYObeSywT0d5y3CK0hxHAWu57/wrNlwlmTXsxwRzy/umPw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Nexxus\\source\\repos\\Catalogo\\Catalogo\\Catalogo.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Nexxus\\.nuget\\packages\\bouncycastle\\1.8.6.1\\bouncycastle.1.8.6.1.nupkg.sha512",
+    "C:\\Users\\Nexxus\\.nuget\\packages\\itextsharp\\5.5.13.2\\itextsharp.5.5.13.2.nupkg.sha512"
+  ],
   "logs": []
 }

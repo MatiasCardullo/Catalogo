@@ -44,8 +44,8 @@ namespace Catalogo
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(25, 92);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.label3.Location = new System.Drawing.Point(32, 81);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 20);
             this.label3.TabIndex = 15;
@@ -54,8 +54,8 @@ namespace Catalogo
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(25, 62);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.label2.Location = new System.Drawing.Point(32, 45);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 20);
             this.label2.TabIndex = 14;
@@ -64,8 +64,8 @@ namespace Catalogo
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(12, 30);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.label1.Location = new System.Drawing.Point(21, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 20);
             this.label1.TabIndex = 13;
@@ -78,8 +78,8 @@ namespace Catalogo
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.AutoSize = true;
             this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(235, 157);
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.button1.Location = new System.Drawing.Point(209, 143);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(128, 30);
             this.button1.TabIndex = 8;
@@ -89,37 +89,37 @@ namespace Catalogo
             // 
             // txtProducto
             // 
-            this.txtProducto.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtProducto.Location = new System.Drawing.Point(87, 27);
+            this.txtProducto.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.txtProducto.Location = new System.Drawing.Point(100, 12);
             this.txtProducto.Name = "txtProducto";
-            this.txtProducto.Size = new System.Drawing.Size(276, 27);
+            this.txtProducto.Size = new System.Drawing.Size(237, 27);
             this.txtProducto.TabIndex = 16;
             // 
             // txtMarca
             // 
-            this.txtMarca.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtMarca.Location = new System.Drawing.Point(87, 59);
+            this.txtMarca.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.txtMarca.Location = new System.Drawing.Point(100, 45);
             this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(276, 27);
+            this.txtMarca.Size = new System.Drawing.Size(237, 27);
             this.txtMarca.TabIndex = 17;
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtPrecio.Location = new System.Drawing.Point(101, 89);
+            this.txtPrecio.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.txtPrecio.Location = new System.Drawing.Point(112, 78);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(262, 27);
+            this.txtPrecio.Size = new System.Drawing.Size(225, 27);
             this.txtPrecio.TabIndex = 18;
             this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
             // 
             // txtImage
             // 
-            this.txtImage.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtImage.Location = new System.Drawing.Point(135, 120);
+            this.txtImage.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.txtImage.Location = new System.Drawing.Point(141, 111);
             this.txtImage.Name = "txtImage";
             this.txtImage.ReadOnly = true;
             this.txtImage.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtImage.Size = new System.Drawing.Size(228, 27);
+            this.txtImage.Size = new System.Drawing.Size(196, 27);
             this.txtImage.TabIndex = 20;
             // 
             // openFileDialog1
@@ -134,8 +134,8 @@ namespace Catalogo
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.AutoSize = true;
             this.button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(12, 122);
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.button2.Location = new System.Drawing.Point(12, 111);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(117, 30);
             this.button2.TabIndex = 21;
@@ -145,11 +145,11 @@ namespace Catalogo
             // 
             // FormAñadir
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(375, 199);
+            this.ClientSize = new System.Drawing.Size(349, 185);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.txtImage);
             this.Controls.Add(this.txtPrecio);
@@ -178,6 +178,5 @@ namespace Catalogo
         private System.Windows.Forms.TextBox txtImage;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.OpenFileDialog openFileDialog2;
     }
 }
