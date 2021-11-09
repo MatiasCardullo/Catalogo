@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Catalogo
@@ -26,7 +22,11 @@ namespace Catalogo
             producto = txtProducto.Text;
             marca = txtMarca.Text;
             precio = txtPrecio.Text;
-            image = txtImage.Text;
+            image = String.Concat(
+                @"C:\Catalogo\images\", marca, "-", producto,
+                new FileInfo(txtImage.Text).Extension);
+            if (!File.Exists(image))
+                File.Copy(txtImage.Text, image);
             this.DialogResult = DialogResult.OK;
         }
 

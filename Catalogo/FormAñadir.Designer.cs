@@ -124,8 +124,7 @@ namespace Catalogo
             // 
             // openFileDialog1
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.Filter = "Imagenes|*.png|*.jpg|*.jpeg";
+            this.openFileDialog1.Filter = "Imagenes(*.jpeg,*.png,*.jpg,*.gif)|*.jpeg;*.png;*.jpg;*.gif";
             // 
             // button2
             // 

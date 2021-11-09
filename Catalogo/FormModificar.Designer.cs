@@ -124,8 +124,7 @@ namespace Catalogo
             // 
             // openFileDialog1
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.Filter = "Imagenes|*.png|*.jpg|*.jpeg";
+            this.openFileDialog1.Filter = "Imagenes(*.jpeg,*.png,*.jpg,*.gif)|*.jpeg;*.png;*.jpg;*.gif";
             // 
             // button2
             // 
@@ -159,7 +158,7 @@ namespace Catalogo
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Name = "FormModificar";
-            this.Text = "Añadir";
+            this.Text = "Modificar";
             this.ResumeLayout(false);
             this.PerformLayout();
 
