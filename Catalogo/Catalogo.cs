@@ -37,12 +37,8 @@ namespace Catalogo
             using (WebClient wc = new WebClient())
             {
                 wc.DownloadFileCompleted += wc_DownloadFileCompleted;
-                wc.DownloadFileAsync(new Uri(@"https://github.com/MatiasCardullo/Catalogo/raw/main/Catalogo/README.MD"), @"c:\Catalogo\README.MD");
+                wc.DownloadFileAsync(new Uri(@"https://raw.githubusercontent.com/MatiasCardullo/Catalogo/main/README.md"), @"c:\Catalogo\README.MD");
             }
-            if (File.ReadLines(@"c:\Catalogo\README.MD").SequenceEqual(File.ReadLines(@"c:\Catalogo\version.md")))
-                File.Delete(@"c:\Catalogo\README.MD");
-            else
-                update = true;
         }
         private void wc_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
@@ -61,7 +57,9 @@ namespace Catalogo
         {
             try
             {
-                if (update)
+                if (File.ReadLines(@"c:\Catalogo\README.MD").SequenceEqual(File.ReadLines(@"c:\Catalogo\version.md")))
+                    File.Delete(@"c:\Catalogo\README.MD");
+                else
                 {
                     string[,] aux = { { @"https://github.com/MatiasCardullo/Catalogo/raw/main/Catalogo/bin/Debug/net46/itextsharp.dll", @"C:\Catalogo2\itextsharp.dll" },
                                                 { @"https://github.com/MatiasCardullo/Catalogo/raw/main/Catalogo/bin/Debug/net46/BouncyCastle.Crypto.dll", @"C:\Catalogo2\BouncyCastle.Crypto.dll" },
@@ -144,11 +142,11 @@ namespace Catalogo
             if (dataGridView1.Rows.Count > 0)
             {
                 bool ErrorMessage = false;
-                if (File.Exists(@"c:\Catalogo\list.pdf"))
+                if (File.Exists(@"c:\Catalogo\catalogo.pdf"))
                 {
                     try
                     {
-                        File.Delete(@"c:\Catalogo\list.pdf");
+                        File.Delete(@"c:\Catalogo\catalogo.pdf");
                     }
                     catch (Exception ex)
                     {
@@ -188,7 +186,7 @@ namespace Catalogo
                                 i++;
                             }
                         }
-                        using (FileStream fileStream = new FileStream(@"c:\Catalogo\list.pdf", FileMode.Create))
+                        using (FileStream fileStream = new FileStream(@"c:\Catalogo\catalogo.pdf", FileMode.Create))
                         {
                             Document document = new Document(PageSize.A4, 8f, 8f, 8f, 8f);
                             PdfWriter.GetInstance(document, fileStream);
@@ -197,13 +195,24 @@ namespace Catalogo
                             document.Close();
                             fileStream.Close();
                         }
-                        string a = DateTime.Today.ToString();
-
-                        Command(@"C:\Catalogo\uploader\cmd\git add c:\Catalogo\list.pdf");
-                        Command("C:\\Catalogo\\uploader\\cmd\\git commit -m \"" + DateTime.Today.ToString() + "\"");
-                        Command(@"C:\Catalogo\uploader\cmd\git branch -M main");
-                        Command(@"C:\Catalogo\uploader\cmd\git remote add origin https://github.com/matyz97/Catalogo.git");
-                        Command(@"C:\Catalogo\uploader\cmd\git push -u origin main");
+                        using (StreamWriter w = new StreamWriter(@"C:\Catalogo\git.bat"))
+                        {
+                            string gitPath= @"C:\Catalogo\uploader\cmd\git";
+                            w.WriteLine(gitPath + @" add c:\Catalogo\catalogo.pdf");
+                            w.WriteLine(gitPath + " commit -m \"catalogo change\"");
+                            w.WriteLine(gitPath + " branch -M main");
+                            w.WriteLine(gitPath + @"  remote add origin https://matyz97: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@github.com/matyz97/catalogo.git");
+                            w.WriteLine(gitPath + " push -u origin main");
+                            w.WriteLine("del git.bat");
+                            w.Close();
+                        }
+                        ProcessStartInfo procStartInfo = new ProcessStartInfo("cmd", "/c " + @"C:\Catalogo\git.bat");
+                        procStartInfo.UseShellExecute = false;
+                        procStartInfo.CreateNoWindow = true;
+                        procStartInfo.WorkingDirectory = @"C:\Catalogo";
+                        Process proc = new Process();
+                        proc.StartInfo = procStartInfo;
+                        proc.Start();
                         MessageBox.Show("Data Export Successfully");
                     }
                     catch (Exception ex)

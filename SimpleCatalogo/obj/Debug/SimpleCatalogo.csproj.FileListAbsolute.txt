@@ -1,0 +1,10 @@
+C:\Users\Nexxus\source\repos\Catalogo\SimpleCatalogo\bin\Debug\SimpleCatalogo.exe.config
+C:\Users\Nexxus\source\repos\Catalogo\SimpleCatalogo\bin\Debug\SimpleCatalogo.exe
+C:\Users\Nexxus\source\repos\Catalogo\SimpleCatalogo\bin\Debug\SimpleCatalogo.pdb
+C:\Users\Nexxus\source\repos\Catalogo\SimpleCatalogo\obj\Debug\SimpleCatalogo.csproj.AssemblyReference.cache
+C:\Users\Nexxus\source\repos\Catalogo\SimpleCatalogo\obj\Debug\SimpleCatalogo.Form1.resources
+C:\Users\Nexxus\source\repos\Catalogo\SimpleCatalogo\obj\Debug\SimpleCatalogo.Properties.Resources.resources
+C:\Users\Nexxus\source\repos\Catalogo\SimpleCatalogo\obj\Debug\SimpleCatalogo.csproj.GenerateResource.cache
+C:\Users\Nexxus\source\repos\Catalogo\SimpleCatalogo\obj\Debug\SimpleCatalogo.csproj.CoreCompileInputs.cache
+C:\Users\Nexxus\source\repos\Catalogo\SimpleCatalogo\obj\Debug\SimpleCatalogo.exe
+C:\Users\Nexxus\source\repos\Catalogo\SimpleCatalogo\obj\Debug\SimpleCatalogo.pdb
