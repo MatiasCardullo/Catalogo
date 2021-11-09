@@ -40,17 +40,12 @@ namespace Catalogo
                 wc.DownloadFileAsync(new Uri(@"https://raw.githubusercontent.com/MatiasCardullo/Catalogo/main/README.md"), @"c:\Catalogo\README.MD");
             }
         }
-        private void wc_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
-        {
-            //progressBar.Value = e.ProgressPercentage;
-        }
         private void wc_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
         {
-            //progressBar.Value = 0;
             if (e.Cancelled)
                 MessageBox.Show("The download has been cancelled");
             else if (e.Error != null)
-                MessageBox.Show("An error ocurred while trying to download git");
+                MessageBox.Show("An error ocurred while trying to download");
         }
 
         private void Catalogo_FormClosing(object sender, FormClosingEventArgs e)
@@ -61,11 +56,10 @@ namespace Catalogo
                     File.Delete(@"c:\Catalogo\README.MD");
                 else
                 {
-                    string[,] aux = { { @"https://github.com/MatiasCardullo/Catalogo/raw/main/Catalogo/bin/Debug/net46/itextsharp.dll", @"C:\Catalogo2\itextsharp.dll" },
-                                                { @"https://github.com/MatiasCardullo/Catalogo/raw/main/Catalogo/bin/Debug/net46/BouncyCastle.Crypto.dll", @"C:\Catalogo2\BouncyCastle.Crypto.dll" },
-                                                { @"https://github.com/MatiasCardullo/Catalogo/raw/main/Catalogo/bin/Debug/net46/Catalogo.exe", @"C:\Catalogo2\Catalogo.exe" }
+                    string[,] aux = { { @"https://github.com/MatiasCardullo/Catalogo/raw/main/Catalogo/bin/Debug/net46/Catalogo.exe", @"C:\Catalogo2\Catalogo.exe" },
+                                                { @"https://github.com/MatiasCardullo/Catalogo/raw/main/SimpleCatalogo/bin/Debug/SimpleCatalogo.exe", @"C:\Catalogo\SimpleCatalogo.exe" }
                                                 };
-                    for (int i = 0; i < 3; i++)
+                    for (int i = 0; i < 2; i++)
                     {
                         using (WebClient wc = new WebClient())
                         {
